@@ -26,28 +26,28 @@ npm install @onflow/fcl
 
 ### 3. import文でconfigとauthorizeメソッドをimportする
 ```
-import * as fcl from "@onflow/fcl";
+import { authenticate, unauthenticate, currentUser, mutate, tx } from '@onflow/fcl';
 ```
 
 <br><br>
 
 ### 4. ブロックチェーンに繋ぐ設定をする
+
+:gear: Testnet
 ```
-// FOR TESTING (Testnet)
 fcl.config({
-  "discovery.wallet": "https://lab.blsqui.net/authn", // Blsqui Discovery Point
-  "discovery.wallet.method": "IFRAME/RPC",
+  "discovery.wallet": "https://lab.blsqui.net/authn",
   "accessNode.api": "https://rest-testnet.onflow.org",
   "flow.network": "testnet",
   "app.detail.title": "Your Game Name",
   "app.detail.icon": "https://yourgame.com/icon.png"
 })
-
-// FOR PRODUCTION (Mainnet)
+```
+:gear: Mainnet
+```
 fcl.config({
-  "discovery.wallet": "https://wallet.blsqui.net/authn", // Blsqui Discovery Point
-  "discovery.wallet.method": "IFRAME/RPC",
-  "accessNode.api": "https://rest-testnet.onflow.org",
+  "discovery.wallet": "https://wallet.blsqui.net/authn",
+  "accessNode.api": "https://rest-mainnet.onflow.org",
   "flow.network": "mainnet",
   "app.detail.title": "Your Game Name",
   "app.detail.icon": "https://yourgame.com/icon.png"
@@ -57,25 +57,21 @@ fcl.config({
 <br><br>
 
 ### 5. ボタンを配置してclickイベントにauthorizeメソッドを紐付ける
+<img width="400" alt="photo1" src="https://github.com/user-attachments/assets/4bcdd094-37c3-48c7-b06a-c8988174eb7c" />
 ```
-<style>
-  .blsqui-btn { background: #5d5fef; color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: transform 0.1s; }
-  .blsqui-btn:hover { transform: scale(1.02); background: #4a4cd9; }
-</style>
-
+<style>.blsqui-btn { background: #5d5fef; color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: transform 0.1s; } .blsqui-btn:hover { transform: scale(1.02); background: #4a4cd9; }</style>
 <button class="blsqui-btn" on:click={fcl.authenticate}>Sign In with Blsqui</button>
 ```
-<img width="917" height="649" alt="photo1" src="https://github.com/user-attachments/assets/4bcdd094-37c3-48c7-b06a-c8988174eb7c" />
 
 <br><br>
 
 ### 6. ボタンを押すとBlsquiウォレットが出現します。
-<img width="918" height="657" alt="photo2" src="https://github.com/user-attachments/assets/ea5d7ef2-63cf-437b-83a1-26c419ad7d60" />
+<img width="400" alt="photo2" src="https://github.com/user-attachments/assets/ea5d7ef2-63cf-437b-83a1-26c419ad7d60" />
 
 <br><br>
 
 ### 7. メールアドレスを入れてContinueを押します。
-（調整中）
+（現在デバッグ中です）
 ```
 
 ```
@@ -83,7 +79,7 @@ fcl.config({
 <br><br>
 
 ### 8. 入力したメールアドレスに6桁の数字が送られます。それをコピーしてください。
-（調整中）
+（現在デバッグ中です）
 ```
 
 ```
@@ -91,6 +87,7 @@ fcl.config({
 <br><br>
 
 ### 9. Blsquiウォレットに戻って入力してください。
+（現在デバッグ中です）
 ```
 
 ```
@@ -98,6 +95,7 @@ fcl.config({
 <br><br>
 
 ### 10. Flow blockchain のアドレスが発行されてBlaquiウォレットにアドレスが表示されます。(Flow blockchain ではアドレスが作られた時からストレージのデポジット費用がわりの0.001FLOWトークンを所有しています。)
+（現在デバッグ中です）
 ```
 
 ```
