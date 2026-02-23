@@ -11,7 +11,8 @@
 ```
 npm create vite@latest web3-game-frontend -- --template svelte-ts
 ```
-:sparkles: インストールが終わると自動的にブラウザに[localhost:5173](http://localhost:5173/)が立ち上がります。コードを編集するとブラウザに自動的に反映されます。<br>:sparkles: Svelte は素のHTMLを生成するので、文法はReactに近いですが既存のWebフレームワーク(React, Vue)に比べて高速でゲーム作りに適していると評判です。また、その特徴からブロックチェーンライブラリを全く設定なしで使える、という大きな利点があります。
+:sparkles: インストールが終わると自動的にブラウザに[localhost:5173](http://localhost:5173/)が立ち上がります。コードを編集するとブラウザに自動的に反映されます。<br>
+:sparkles: Svelte は素のHTMLを生成するので、文法はReactに近いですが既存のWebフレームワーク(React, Vue)に比べて高速でゲーム作りに適していると評判です。また、その特徴からブロックチェーンライブラリを全く設定なしで使える、という大きな利点があります。
 
 <br><br>
 
@@ -24,7 +25,7 @@ npm install @onflow/fcl
 
 ### 3. ライブラリのconfigとauthorizeメソッドをimportする
 ```
-import { authenticate, unauthenticate, currentUser, mutate, tx } from '@onflow/fcl';
+import { config, authenticate, unauthenticate, currentUser, mutate, tx } from '@onflow/fcl';
 ```
 
 <br><br>
@@ -33,7 +34,7 @@ import { authenticate, unauthenticate, currentUser, mutate, tx } from '@onflow/f
 
 :gear: Testnet
 ```
-fcl.config({
+config({
   "discovery.wallet": "https://lab.blsqui.net/authn",
   "accessNode.api": "https://rest-testnet.onflow.org",
   "flow.network": "testnet",
@@ -43,7 +44,7 @@ fcl.config({
 ```
 :gear: Mainnet
 ```
-fcl.config({
+config({
   "discovery.wallet": "https://wallet.blsqui.net/authn",
   "accessNode.api": "https://rest-mainnet.onflow.org",
   "flow.network": "mainnet",
@@ -59,7 +60,7 @@ fcl.config({
 
 ```
 <style>.blsqui-btn { background: #5d5fef; color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: transform 0.1s; } .blsqui-btn:hover { transform: scale(1.02); background: #4a4cd9; }</style>
-<button class="blsqui-btn" on:click={fcl.authenticate}>Sign In with Blsqui</button>
+<button class="blsqui-btn" on:click={authenticate}>Sign In with Blsqui</button>
 ```
 
 <br><br>
