@@ -54,13 +54,14 @@ fcl.config({
 
 <button class="blsqui-btn" on:click={fcl.authenticate}>Sign In with Blsqui</button>
 ```
+<img width="917" height="649" alt="photo1" src="https://github.com/user-attachments/assets/4bcdd094-37c3-48c7-b06a-c8988174eb7c" />
 
 6. ボタンを押すとBlsquiウォレットが出現します。
-```
+<img width="918" height="657" alt="photo2" src="https://github.com/user-attachments/assets/ea5d7ef2-63cf-437b-83a1-26c419ad7d60" />
 
-```
 
 7. メールアドレスを入れてContinueを押します。
+（調整中）
 ```
 
 ```
