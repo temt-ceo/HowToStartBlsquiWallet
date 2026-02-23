@@ -1,6 +1,6 @@
 # Blsqui Walletの始め方
 
-<p>:zap: BlsquiはInteraction Templatesによりゲームに特化するように設計されたカストディアル・ウォレットです。安全性が強化され、ゲーム資産に対して強い個性を持ったウォレットになっています。</p>
+<p>:zap: BlsquiはInteraction Templatesでゲームに特化するように設計されたカストディアル・ウォレットです。安全性が強化され、ゲーム資産に対して強い個性を持ったウォレットになっています。</p>
 
 <br><br>
 
@@ -11,7 +11,7 @@
 ```
 npm create vite@latest web3-game-frontend -- --template svelte-ts
 ```
-:sparkles: インストールが終わると自動的にブラウザに[localhost:5173](http://localhost:5173/)が立ち上がります。コードを編集するとブラウザに自動的に反映されます。<br>
+:sparkles: インストールが終わると自動的に[localhost:5173](http://localhost:5173/)がブラウザに立ち上がります。コードを編集するとブラウザに自動的に反映されます。<br>
 :sparkles: Svelte は素のHTMLを生成するので、文法はReactに近いですが既存のWebフレームワーク(React, Vue)に比べて高速でゲーム作りに適していると評判です。また、その特徴からブロックチェーンライブラリを全く設定なしで使える、という大きな利点があります。
 
 <br><br>
