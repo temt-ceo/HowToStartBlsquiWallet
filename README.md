@@ -1,19 +1,17 @@
 # Blsqui Walletの始め方
-<b>Blsquiはゲームに特化するようにInteraction Templatesで設計されたカストディアル・ウォレットです。安全が強化され、ゲーム資産に対して強い個性を持ったウォレットになっています。</b>
-<hr>
 
-### 以下の手順でBlsquiウォレットを呼び出すことができるゲームの制作環境を準備できます。
+:zap: BlsquiはInteraction Templatesでゲームに特化するように設計されたカストディアル・ウォレットです。安全性が強化され、ゲーム資産に対して強い個性を持ったウォレットになっています。
+
+<br><br>
+
+### :wrench: 以下の手順でBlsquiウォレットを呼び出すことができるゲームの制作環境を準備できます。
 <br>
 
 ### 1. Svelte Webフレームワークをインストール
 ```
-# Initialize a new Vite project with Svelte framework
 npm create vite@latest web3-game-frontend -- --template svelte-ts
 ```
-
-Svelte は素のHTMLを生成するので、文法はReactに近いですが既存のWebフレームワーク(React, Vue)に比べて高速で、ゲーム作りに適している、と評判です。
-
-また、その特徴からブロックチェーンライブラリを全く設定なしで使える、という大きな利点があります。
+:sparkles: インストールが終わると自動的にブラウザに[localhost:5173](http://localhost:5173/)が立ち上がります。コードを編集するとブラウザに自動的に反映されます。<br>Svelte は素のHTMLを生成するので、文法はReactに近いですが既存のWebフレームワーク(React, Vue)に比べて高速でゲーム作りに適している、と評判です。また、その特徴からブロックチェーンライブラリを全く設定なしで使える、という大きな利点があります。
 
 <br><br>
 
@@ -24,7 +22,7 @@ npm install @onflow/fcl
 
 <br><br>
 
-### 3. import文でconfigとauthorizeメソッドをimportする
+### 3. ライブラリのconfigとauthorizeメソッドをimportする
 ```
 import { authenticate, unauthenticate, currentUser, mutate, tx } from '@onflow/fcl';
 ```
@@ -56,8 +54,9 @@ fcl.config({
 
 <br><br>
 
-### 5. ボタンを配置してclickイベントにauthorizeメソッドを紐付ける
+### 5. HTMLのボタンを配置してclickイベントにauthorizeメソッドを紐付ける
 <img width="400" alt="photo1" src="https://github.com/user-attachments/assets/4bcdd094-37c3-48c7-b06a-c8988174eb7c" />
+
 ```
 <style>.blsqui-btn { background: #5d5fef; color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: transform 0.1s; } .blsqui-btn:hover { transform: scale(1.02); background: #4a4cd9; }</style>
 <button class="blsqui-btn" on:click={fcl.authenticate}>Sign In with Blsqui</button>
