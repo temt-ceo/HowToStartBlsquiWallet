@@ -90,12 +90,12 @@ await fcl.mutate({
 
 #### サンプルトランザクションコード<br><br>
 
-🎨 野菜室保存管理のトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION1.md<br><br>
+🎨 野菜室保存管理のトランザクションコード例: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION1.md<br><br>
 
-🎨 無人野菜販売所のトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION2.md<br><br>
+🎨 無人野菜販売所のトランザクションコード例: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION2.md<br><br>
 
-🎨 ライドシェアサービスのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION3.md<br><br>
+🎨 ライドシェアサービスのトランザクションコード例: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION3.md<br><br>
 
-🎨 シューティングeSportsゲームのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION4.md<br><br>
+🎨 シューティングeSportsゲームのトランザクションコード例: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION4.md<br><br>
 
-🎨 MMORPGのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION5.md<br><br>
+🎨 MMORPGのトランザクションコード例: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION5.md<br><br>
