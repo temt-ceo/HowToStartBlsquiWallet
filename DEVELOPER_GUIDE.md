@@ -88,7 +88,7 @@ await fcl.mutate({
 
 <br><br>
 
-参考までにサンプルトランザクションコードを載せておきます。<br><br>
+#### サンプルトランザクションコード<br><br>
 
 🎨 野菜室保存管理のトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION1.md<br><br>
 
