@@ -1,6 +1,6 @@
 # デベロッパーガイド
 
-#### Step1 Install the Flow CLI
+### Step1 Install the Flow CLI
 
 ```
 sh -ci “$(curl  …/install.sh)”
@@ -36,7 +36,7 @@ transaction(itemID: UInt64, price: UFix64) {
 }
 ```
 
-#### Step2 Prepare the Metadata(メタデータをJDONで作成する)
+### Step2 Prepare the Metadata(メタデータをJDONで作成する)
 
 metadata.jsonを作成
 
@@ -60,7 +60,7 @@ metadata.jsonを作成
 }
 ```
 
-#### Step3 Flow CLIでGenerate the FLIX Template
+### Step3 Flow CLIでGenerate the FLIX Templateを作成する
 
 ```
 flow flix generate ./cadence/transactions/buy_item.cdc \
@@ -69,11 +69,11 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
   —network mainmet
 ```
 
-#### Step4 Host the Template
+### Step4 Templateをレジストリに保存する
 
 Upload your buy_item.template.json
 
-#### Step5 Execute in the game
+### Step5 ゲームを実行
 
 ```
 important { mutate} from
@@ -90,12 +90,12 @@ await fcl.mutate({
 
 参考までにサンプルトランザクションコードを載せておきます。<br><br>
 
-🎨 野菜室保存管理のトランザクションコード例はこちら:<br><br>
+🎨 野菜室保存管理のトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION1.md<br><br>
 
-🎨 無人野菜販売所のトランザクションコード例はこちら:<br><br>
+🎨 無人野菜販売所のトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION2.md<br><br>
 
-🎨 ライドシェアサービスのトランザクションコード例はこちら:<br><br>
+🎨 ライドシェアサービスのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION3.md<br><br>
 
-🎨 シューティングeSportsゲームのトランザクションコード例はこちら:<br><br>
+🎨 シューティングeSportsゲームのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION4.md<br><br>
 
-🎨 MMORPGのトランザクションコード例はこちら:: https://github.com/temt-ceo/HowToStartBlsquiWallet<br><br>
+🎨 MMORPGのトランザクションコード例はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet/blob/main/example/web3-game-frontend/SAMPLE_TRANSACTION5.md<br><br>
