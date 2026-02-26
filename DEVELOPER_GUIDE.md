@@ -3,7 +3,7 @@
 ### Step1 Install the Flow CLI
 
 ```
-sh -ci “$(curl  …/install.sh)”
+sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
 
 このようなトランザクションコードがあったとします。
