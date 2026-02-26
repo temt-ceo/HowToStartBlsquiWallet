@@ -5,8 +5,8 @@
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
-
-このようなトランザクションコードがあったとします。
+<hr>
+./cadence/transactions/buy_item.cdcに以下のようなトランザクションコードがあったとします。
 
 ```
 import FungibleToken from 0xFungibleToken
@@ -36,9 +36,9 @@ transaction(itemID: UInt64, price: UFix64) {
 }
 ```
 
-### Step2 Prepare the Metadata(メタデータをJDONで作成する)
+### Step2 Prepare the Metadata(メタデータをJSONで作成する)
 
-metadata.jsonを作成
+metadata.jsonを作成してゲームガイドを記入します。
 
 ```
 {
@@ -64,9 +64,9 @@ metadata.jsonを作成
 
 ```
 flow flix generate ./cadence/transactions/buy_item.cdc \
-  —pre-fill ./metadata.json \
-  —save ./buy_item.template.json \
-  —network mainmet
+  --pre-fill ./metadata.json \
+  --save ./buy_item.template.json \
+  --network mainmet
 ```
 
 ### Step4 Templateをレジストリに保存する
