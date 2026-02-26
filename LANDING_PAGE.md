@@ -1,6 +1,7 @@
-# 題: AIゲームクリエイター登竜門
+プロジェクト計画書（Project Plan）
+# プロジェクト仮題: AIゲームクリエイター登竜門
 
-TEM Technologies Co.合同会社が製作したBlsquiウォレットでゲームを世界に公開!<br><br>
+[TEM Technologies Co.合同会社](https://tem-technologies.com/)が製作したBlsquiウォレットでゲームを世界に公開!<br><br>
 
 自分の考えたオリジナルゲームアイテムを世界に届けよう。<br><br>
 
