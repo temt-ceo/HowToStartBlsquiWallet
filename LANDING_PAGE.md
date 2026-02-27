@@ -11,7 +11,7 @@
 
 純国産(日本製)ウォレットのBlsquiで新感覚ゲームプラットフォームを築きます。<br><br>
 
-開発方法はこちら: https://github.com/temt-ceo/HowToStartBlsquiWallet<br><br>
+開発方法は[こちら](https://github.com/temt-ceo/HowToStartBlsquiWallet)<br><br>
 
 ### -AIゲームクリエイター登竜門の開発(Development of AI game creator gateway)-
 
