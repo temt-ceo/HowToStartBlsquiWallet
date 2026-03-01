@@ -1,47 +1,43 @@
-# Svelte + TS + Vite
+Blsqui | The Sovereign Wallet Standard
+Bridging Industrial-Grade HSM Security with Seamless Web3 Gaming UX.
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+🦑  Overview
+Blsqui is the Semantic Layer for the Flow Blockchain. We solve the "Black Box" transaction problem by translating complex Cadence execution into human-readable, visually verified digital assets. Built for the Cadence 1.0 (Crescendo) era, Blsqui is engineered to be the secure gateway for the next generation of global eSports.
 
-## Recommended IDE Setup
+🛠 Strategic Architecture
+Designed for engineers who demand both performance and provenance.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Semantic Authorization: Leverages FLIX (Flow Interaction Templates) to provide players with real-time, visual verification of transaction intent—eliminating blind signing.
 
-## Need an official Svelte framework?
+Multi-Network Cryptography: Adaptive support for NIST-standard hashing (SHA2-256 / SHA3-256) and dual-curve signatures (P256 and secp256k1) to ensure Mainnet compliance.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+HSM-First Philosophy: Architected to interface with enterprise Hardware Security Modules (HSM), bringing Japanese industrial-grade safety to the open web.
 
-## Technical considerations
+🚀 Tech Stack
+Core: SvelteKit + Vite (Optimized for <100ms Interaction Latency)
 
-**Why use this over SvelteKit?**
+Network: Caddy (Automated SSL & Strict CSP frame-ancestors Security)
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+Auth: JWT-Session Management + Secure SMTP OTP Delivery
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+Blockchain: Full FCL-JS Wallet Discovery & Handshake compliance.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+📈 Roadmap
+Phase 1 (Current): Testnet Beta & Semantic UI Launch.
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+Phase 2: Mainnet Migration & Strategic HSM Partnership Integration.
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+Phase 3: Institutional Security Audit & FLIX-based Scalability.
 
-**Why include `.vscode/extensions.json`?**
+🤝 Strategic Inquiry
+We are currently opening discussions for infrastructure partners and institutional funding.
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+HSM Integration Standards
 
-**Why enable `allowJs` in the TS template?**
+Strategic Infrastructure Partnership
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+Cadence 1.0 Security Migration
 
-**Why is HMR not preserving my local component state?**
+Technical Lead: inquiry@tem-technologies.com
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+Developed by TEM Technologies Co. & Blsqui Co., Ltd.
