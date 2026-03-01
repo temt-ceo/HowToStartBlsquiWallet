@@ -110,10 +110,8 @@ config({
 <br><br>
 
 ### 7. メールアドレスを入れてContinueを押します。
-（現在デバッグ中です）
-```
 
-```
+<img width="400" alt="photo3" alt="スクリーンショット 2026-03-01 13 55 14" src="https://github.com/user-attachments/assets/923d6142-e04f-4d5e-926a-12383bc2d5fa" />
 
 <br><br>
 
@@ -123,10 +121,7 @@ config({
 <br><br>
 
 ### 9. Blsquiウォレットに戻って入力してください。
-（現在デバッグ中です）
-```
-
-```
+<img width="400" alt="photo5" alt="スクリーンショット 2026-03-01 13 54 41" src="https://github.com/user-attachments/assets/fa01e118-856f-4f03-b338-c0199dae6d5f" />
 
 
 <br><br>
