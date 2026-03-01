@@ -79,10 +79,7 @@ config({
 <br><br>
 
 ### 8. 入力したメールアドレスに6桁の数字が送られます。それをコピーしてください。
-（現在デバッグ中です）
-```
-
-```
+<img width="400" alt="photo5"  src="https://github.com/user-attachments/assets/35dc6d57-313c-4002-bab6-23a98903ddf8" />
 
 <br><br>
 
@@ -91,6 +88,7 @@ config({
 ```
 
 ```
+
 
 <br><br>
 
