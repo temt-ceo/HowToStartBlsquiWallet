@@ -79,7 +79,7 @@ config({
 <br><br>
 
 ### 8. 入力したメールアドレスに6桁の数字が送られます。それをコピーしてください。
-<img width="400" alt="photo5"  src="https://github.com/user-attachments/assets/35dc6d57-313c-4002-bab6-23a98903ddf8" />
+<img width="400" alt="photo4" src="https://github.com/user-attachments/assets/4da737cb-57ab-48b7-ba53-9f898d7eee3a" />
 
 <br><br>
 
