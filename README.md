@@ -15,7 +15,7 @@ Multi-Network Cryptography: Adaptive support for NIST-standard hashing (SHA2-256
 HSM-First Philosophy: Architected to interface with enterprise Hardware Security Modules (HSM), bringing Japanese industrial-grade safety to the open web.
 
 ### 🚀 Tech Stack
-Core: SvelteKit + Vite (Optimized for <100ms Interaction Latency)
+Core: Svelte + Vite (Optimized for <100ms Interaction Latency)
 
 Network: Caddy (Automated SSL & Strict CSP frame-ancestors Security)
 
