@@ -105,31 +105,27 @@ config({
 <br><br>
 
 ### 6. ボタンを押すとBlsquiウォレットが出現します。
-<img width="400" alt="photo2" src="https://github.com/user-attachments/assets/ea5d7ef2-63cf-437b-83a1-26c419ad7d60" />
+<img width="400" alt="photo2"  src="https://github.com/user-attachments/assets/f696409e-ac63-4eea-8a2e-d4214675155f" />
 
 <br><br>
 
 ### 7. メールアドレスを入れてContinueを押します。
 
-<img width="400" alt="photo3" alt="スクリーンショット 2026-03-01 13 55 14" src="https://github.com/user-attachments/assets/923d6142-e04f-4d5e-926a-12383bc2d5fa" />
+<img width="400" alt="photo3" src="https://github.com/user-attachments/assets/d134a467-32ae-461b-8b86-de359551a7d1" />
 
 <br><br>
 
 ### 8. 入力したメールアドレスに6桁の数字が送られます。それをコピーしてください。
-<img width="400" alt="photo4" src="https://github.com/user-attachments/assets/4da737cb-57ab-48b7-ba53-9f898d7eee3a" />
+<img width="400" alt="photo4" src="https://github.com/user-attachments/assets/832ca6f2-ea4a-4d19-a0ef-a48e8afb4b13" />
 
 <br><br>
 
 ### 9. Blsquiウォレットに戻って入力してください。
-<img width="400" alt="photo5" alt="スクリーンショット 2026-03-01 13 54 41" src="https://github.com/user-attachments/assets/fa01e118-856f-4f03-b338-c0199dae6d5f" />
-
+<img width="400" alt="photo5" src="https://github.com/user-attachments/assets/95bc7ce5-e0f1-4c40-8e99-f30cea217833" />
 
 <br><br>
 
-### 10. Flow blockchain のアドレスが発行されてBlaquiウォレットにアドレスが表示されます。
+### 10. Flow blockchain のアドレスが発行されて、アカウントに紐付くブロックチェーンのストレージ内容をゲーム開発者が自由に考えてブロックチェーンゲームを作成することができます。
+<img widthwidth="400" alt="photo6" src="https://github.com/user-attachments/assets/bb7c8ed6-7bd1-450a-9291-396c2ad7dc0e" />
 
-（現在デバッグ中です）
-```
-
-```
 :art: Flow blockchain ではアドレスが作られた時からストレージのデポジット費用がわりの0.001FLOWトークンを所有しています。<br>
