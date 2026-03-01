@@ -1,6 +1,6 @@
 # Blsqui | The Sovereign Wallet Standard
 
-### Bridging Industrial-Grade HSM Security with Seamless Web3 Gaming UX.
+## Bridging Industrial-Grade HSM Security with Seamless Web3 Gaming UX.
 
 ### 🦑  Overview
 Blsqui is the Semantic Layer for the Flow Blockchain. We solve the "Black Box" transaction problem by translating complex Cadence execution into human-readable, visually verified digital assets. Built for the Cadence 1.0 (Crescendo) era, Blsqui is engineered to be the secure gateway for the next generation of global eSports.
@@ -43,6 +43,7 @@ Technical Lead: inquiry@tem-technologies.com
 
 #### Developed by TEM Technologies Co. & Blsqui Co., Ltd.
 
+<br><br><br>
 
 # Blsqui Walletの始め方
 
