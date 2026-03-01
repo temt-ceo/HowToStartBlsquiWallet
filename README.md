@@ -6,8 +6,6 @@
 Blsqui is the Semantic Layer for the Flow blockchain. We solve the "Black Box" transaction problem by translating complex Cadence execution into human-readable, visually verified digital assets. Built for the Cadence 1.0 (Crescendo) era, Blsqui is engineered to be the secure gateway for the next generation of global eSports.
 
 ### 🛠 Strategic Architecture
-Designed for engineers who demand both performance and provenance.
-
 Semantic Authorization: Leverages FLIX (Flow Interaction Templates) to provide players with real-time, visual verification of transaction intent—eliminating blind signing.
 
 Multi-Network Cryptography: Adaptive support for NIST-standard hashing (SHA2-256 / SHA3-256) and dual-curve signatures (P256 and secp256k1) to ensure Mainnet compliance.
@@ -15,13 +13,7 @@ Multi-Network Cryptography: Adaptive support for NIST-standard hashing (SHA2-256
 HSM-First Philosophy: Architected to interface with enterprise Hardware Security Modules (HSM), bringing Japanese industrial-grade safety to the open web.
 
 ### 🚀 Tech Stack
-Core: Svelte + Vite (Optimized for <100ms Interaction Latency)
-
-Network: Caddy (Automated SSL & Strict CSP frame-ancestors Security)
-
-Auth: JWT-Session Management + Secure SMTP OTP Delivery
-
-Blockchain: Full FCL-JS Wallet Discovery & Handshake compliance.
+Full FCL-JS Wallet Discovery & Handshake compliance.
 
 ### 📈 Roadmap
 Phase 1 (Current): Testnet Beta & Semantic UI Launch.
