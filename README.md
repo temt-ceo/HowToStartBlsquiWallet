@@ -125,7 +125,7 @@ config({
 
 <br><br>
 
-### 10. Flow blockchain のアドレスが発行されて、アカウントに紐付くブロックチェーンのストレージ内容をゲーム開発者が自由に考えてブロックチェーンゲームを作成することができます。
-<img widthwidth="400" alt="photo6" src="https://github.com/user-attachments/assets/bb7c8ed6-7bd1-450a-9291-396c2ad7dc0e" />
+#### 10. Flow blockchain のアドレスが発行されて、アカウントに紐付くブロックチェーンのストレージ内容をゲーム開発者が自由に考えて変更することが可能なブロックチェーンゲームを作成することができます。
+<img width="400" alt="photo6" src="https://github.com/user-attachments/assets/bb7c8ed6-7bd1-450a-9291-396c2ad7dc0e" />
 
 :art: Flow blockchain ではアドレスが作られた時からストレージのデポジット費用がわりの0.001FLOWトークンを所有しています。<br>
