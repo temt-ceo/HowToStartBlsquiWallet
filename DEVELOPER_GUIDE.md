@@ -7,11 +7,13 @@ Blsqui CLIはデベロッパーがBlsqui Protocol インフラストラクチャ
 トランザクションコードは普段ゲームをする人にはこれによって何が起こるのか分からない怖いコードです。
 そこで、Blsqui プロトコルにトランザクションコードとゲームガイドを一緒にしてIDを発行し、監査を経ることで、ゲームをする人にこれは「戦士の能力を仲間に貸し出し、魔法剣で攻撃」など信用できるメッセージをウォレットに表示できます。
 <br><br>
+
 ## Step1 :wrench: Install the Blsqui CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
 ```
+
 <br><br>
 
 ## Step2 :sparkles: Register game domain.
@@ -39,9 +41,10 @@ Click the button.
 ```
 blsqui-cli config —file ./blsqui-key.txt
 ```
+
 <br><br>
 
-## Step5 トランザクションコードを考えます。
+## Step5 :memo: トランザクションコードを考えます。
 
 ./cadence/transactions/buy_item.cdcに以下のようなトランザクションコードがあったとします。
 
@@ -72,9 +75,10 @@ transaction(itemID: UInt64, price: UFix64) {
   }
 }
 ```
+
 <br><br>
 
-## Step6 Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
+## Step6 :memo: Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
 
 metadata.jsonを作成してゲームガイドを記入します。
 
@@ -97,13 +101,15 @@ metadata.jsonを作成してゲームガイドを記入します。
   }
 }
 ```
+
 <br><br>
 
-## Step7 Install the Flow CLI
+## Step7 :wrench: Install the Flow CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
+
 <br><br>
 
 ## Step8 :gear: Generate the FLIX Template.
@@ -114,6 +120,7 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
   --save ./buy_item.template.json \
   --network mainmet
 ```
+
 <br><br>
 
 ## Step9 🚀 Upload your buy_item.template.json. You can attach one image.
@@ -121,6 +128,7 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
 ```
 blsqui-cli upload ./template.json ./fire-sword.png
 ```
+
 <br><br>
 
 ## Step10 :gear: 審査依頼を出します。
@@ -139,6 +147,7 @@ blsqui-cli list # (templateIdとイメージ名を返す)
 blsqui-cli view —templateId “123xyz”
 blsqui-cli view —templateId “123xyz” —image
 ```
+
 <br><br>
 
 ## Step11 📈 一般公開設定をします。
