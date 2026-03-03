@@ -1,16 +1,31 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
-  import * as fcl from "@onflow/fcl";
+  import { config, authenticate, unauthenticate, currentUser, mutate, authz } from '@onflow/fcl';
+  let blsquiWalletUser: any;
+
   // FOR TESTING (Testnet)
-  fcl.config({
+  config({
     "discovery.wallet": "https://lab.blsqui.net/authn", // Blsqui Discovery Point
-    "discovery.wallet.method": "IFRAME/RPC",
     "accessNode.api": "https://rest-testnet.onflow.org",
     "flow.network": "testnet",
     "app.detail.title": "Your Game Name",
     "app.detail.icon": "https://yourgame.com/icon.png"
-  })
+  });
+  currentUser.subscribe(async (user) => {
+    blsquiWalletUser = user
+  });
+
+  const transactionTest = async function () {
+    await mutate({
+      cadence: ` transaction { prepare(signer: &Account) { log("Squid Authz Test Successful") } } `,
+      args: (arg, t) => [],
+      proposer: authz,
+      payer: authz,
+      authorizations: [authz],
+      limit: 999
+    });
+  };
 </script>
 
 <main>
@@ -26,7 +41,13 @@
 
   <div class="card">
 
-    <button class="blsqui-btn" on:click={fcl.authenticate}>Sign In with Blsqui</button>
+    {#if blsquiWalletUser?.addr}
+      <button class="blsqui-btn" on:click={unauthenticate}>Sign Out from Blsqui</button>
+      <button class="blsqui-btn" on:click={transactionTest}>トランザクションテスト</button>
+    {:else}
+      <button class="blsqui-btn" on:click={authenticate}>Sign In with Blsqui</button>
+    {/if}
+    {blsquiWalletUser?.addr}
   </div>
 </main>
 
