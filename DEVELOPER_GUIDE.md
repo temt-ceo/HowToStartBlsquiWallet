@@ -7,13 +7,13 @@ Blsqui CLIはデベロッパーがBlsqui Protocol インフラストラクチャ
 トランザクションコードは普段ゲームをする人にはこれによって何が起こるのか分からない怖いコードです。
 そこで、Blsqui プロトコルにトランザクションコードとゲームガイドを一緒にしてIDを発行し、監査を経ることで、ゲームをする人にこれは「戦士の能力を仲間に貸し出し、魔法剣で攻撃」など信用できるメッセージをウォレットに表示できます。
 
-### Step1 :wrench: Install the Blsqui CLI
+## Step1 :wrench: Install the Blsqui CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
 ```
 
-### Step2 :sparkles: Register game domain.
+## Step2 :sparkles: Register game domain.
 
 ```
 blsqui-cli init —domain (Game’s landing page url) —email (same domain’s email address)
@@ -24,20 +24,20 @@ blsqui-cli init —domain https://aethel-dragon.com —email dev@aethel-dragon.c
 
 email domain must same as domain.
 
-### Step3 Click one time use link, then project key is shown on the page. Download the file and change the password on the management screen.
+## Step3 Click one time use link, then project key is shown on the page. Download the file and change the password on the management screen.
 
 Hello Team! A developer from your organization is claiming aethel-dragon.com on the Blsqui Protocol Registry. Please click here to verify ownership: https://blsqui.net/api/v1/verify?token=123abc
 
 Click the button.
 “Download blsqui-key.txt.”
 
-### Step4 :gear: Configure Blsqui CLI with project key.
+## Step4 :gear: Configure Blsqui CLI with project key.
 
 ```
 blsqui-cli config —file ./blsqui-key.txt
 ```
 
-### Step5 トランザクションコードを考えます。
+## Step5 トランザクションコードを考えます。
 
 ./cadence/transactions/buy_item.cdcに以下のようなトランザクションコードがあったとします。
 
@@ -69,7 +69,7 @@ transaction(itemID: UInt64, price: UFix64) {
 }
 ```
 
-### Step6 Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
+## Step6 Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
 
 metadata.jsonを作成してゲームガイドを記入します。
 
@@ -93,13 +93,13 @@ metadata.jsonを作成してゲームガイドを記入します。
 }
 ```
 
-### Step7 Install the Flow CLI
+## Step7 Install the Flow CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
 
-### Step8 :gear: Generate the FLIX Template.
+## Step8 :gear: Generate the FLIX Template.
 
 ```
 flow flix generate ./cadence/transactions/buy_item.cdc \
@@ -108,13 +108,13 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
   --network mainmet
 ```
 
-### Step9 🚀 Upload your buy_item.template.json. You can attach one image.
+## Step9 🚀 Upload your buy_item.template.json. You can attach one image.
 
 ```
 blsqui-cli upload ./template.json ./fire-sword.png
 ```
 
-### Step10 :gear: 審査依頼を出します。
+## Step10 :gear: 審査依頼を出します。
 
 ```
 blsqui-cli update —template-id x355dfx —require-audit
@@ -131,7 +131,7 @@ blsqui-cli view —templateId “123xyz”
 blsqui-cli view —templateId “123xyz” —image
 ```
 
-### Step11 📈 一般公開設定をします。
+## Step11 📈 一般公開設定をします。
 
 ```
 blsqui-cli update —template-id x355dfx —publish
@@ -141,7 +141,7 @@ blsqui-cli update —template-id x355dfx —publish
 
 URL: https://blsqui.net/registry/(your domain)
 
-### Step12 ゲームを実行
+## Step12 ゲームを実行
 
 <b>テンプレートキーをmutateファンクションにセットするとウォレットが呼び出されます。一般公開設定をしていなくても表示されます。画像を登録していれば画像も表示されます。</b>
 
