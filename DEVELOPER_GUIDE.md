@@ -1,19 +1,19 @@
-# デベロッパーガイド
+# Develoer Guide
 
-## Blsqui CLIの操作方法
+## 🛠 Blsqui CLIの操作方法
 
 Blsqui CLIはデベロッパーがBlsqui Protocol インフラストラクチャーを操作する為のコマンドラインインターフェースです。
 
 トランザクションコードは普段ゲームをする人にはこれによって何が起こるのか分からない怖いコードです。
 そこで、Blsqui プロトコルにトランザクションコードとゲームガイドを一緒にしてIDを発行し、監査を経ることで、ゲームをする人にこれは「戦士の能力を仲間に貸し出し、魔法剣で攻撃」など信用できるメッセージをウォレットに表示できます。
 
-### Step1 Install the Blsqui CLI
+### Step1 :wrench: Install the Blsqui CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
 ```
 
-### Step2 Register game domain.
+### Step2 :sparkles: Register game domain.
 
 ```
 blsqui-cli init —domain (Game’s landing page url) —email (same domain’s email address)
@@ -31,7 +31,7 @@ Hello Team! A developer from your organization is claiming aethel-dragon.com on 
 Click the button.
 “Download blsqui-key.txt.”
 
-### Step4 Configure Blsqui CLI with project key.
+### Step4 :gear: Configure Blsqui CLI with project key.
 
 ```
 blsqui-cli config —file ./blsqui-key.txt
@@ -99,7 +99,7 @@ metadata.jsonを作成してゲームガイドを記入します。
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
 
-### Step8 Flow CLIでGenerate the FLIX Templateを作成する
+### Step8 :gear: Generate the FLIX Template.
 
 ```
 flow flix generate ./cadence/transactions/buy_item.cdc \
@@ -108,13 +108,13 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
   --network mainmet
 ```
 
-### Step9 Upload your buy_item.template.json. You can attach one image.
+### Step9 🚀 Upload your buy_item.template.json. You can attach one image.
 
 ```
 blsqui-cli upload ./template.json ./fire-sword.png
 ```
 
-### Step10 審査依頼を出します。
+### Step10 :gear: 審査依頼を出します。
 
 ```
 blsqui-cli update —template-id x355dfx —require-audit
@@ -131,7 +131,7 @@ blsqui-cli view —templateId “123xyz”
 blsqui-cli view —templateId “123xyz” —image
 ```
 
-### Step11 一般公開設定をします。
+### Step11 📈 一般公開設定をします。
 
 ```
 blsqui-cli update —template-id x355dfx —publish
