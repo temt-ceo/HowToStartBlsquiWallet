@@ -6,12 +6,13 @@ Blsqui CLIはデベロッパーがBlsqui Protocol インフラストラクチャ
 
 トランザクションコードは普段ゲームをする人にはこれによって何が起こるのか分からない怖いコードです。
 そこで、Blsqui プロトコルにトランザクションコードとゲームガイドを一緒にしてIDを発行し、監査を経ることで、ゲームをする人にこれは「戦士の能力を仲間に貸し出し、魔法剣で攻撃」など信用できるメッセージをウォレットに表示できます。
-
+<br><br>
 ## Step1 :wrench: Install the Blsqui CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
 ```
+<br><br>
 
 ## Step2 :sparkles: Register game domain.
 
@@ -23,6 +24,7 @@ e.g.
 blsqui-cli init —domain https://aethel-dragon.com —email dev@aethel-dragon.com
 
 email domain must same as domain.
+<br><br><br>
 
 ## Step3 Click one time use link, then project key is shown on the page. Download the file and change the password on the management screen.
 
@@ -30,12 +32,14 @@ Hello Team! A developer from your organization is claiming aethel-dragon.com on 
 
 Click the button.
 “Download blsqui-key.txt.”
+<br><br><br>
 
 ## Step4 :gear: Configure Blsqui CLI with project key.
 
 ```
 blsqui-cli config —file ./blsqui-key.txt
 ```
+<br><br>
 
 ## Step5 トランザクションコードを考えます。
 
@@ -68,6 +72,7 @@ transaction(itemID: UInt64, price: UFix64) {
   }
 }
 ```
+<br><br>
 
 ## Step6 Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
 
@@ -92,12 +97,14 @@ metadata.jsonを作成してゲームガイドを記入します。
   }
 }
 ```
+<br><br>
 
 ## Step7 Install the Flow CLI
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
 ```
+<br><br>
 
 ## Step8 :gear: Generate the FLIX Template.
 
@@ -107,12 +114,14 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
   --save ./buy_item.template.json \
   --network mainmet
 ```
+<br><br>
 
 ## Step9 🚀 Upload your buy_item.template.json. You can attach one image.
 
 ```
 blsqui-cli upload ./template.json ./fire-sword.png
 ```
+<br><br>
 
 ## Step10 :gear: 審査依頼を出します。
 
@@ -130,6 +139,7 @@ blsqui-cli list # (templateIdとイメージ名を返す)
 blsqui-cli view —templateId “123xyz”
 blsqui-cli view —templateId “123xyz” —image
 ```
+<br><br>
 
 ## Step11 📈 一般公開設定をします。
 
@@ -140,6 +150,7 @@ blsqui-cli update —template-id x355dfx —publish
 ブラウジングページに表示されます。これによって世界に公開された信用のおけるトランザクションコードである事が証明されます。(審査が通っていない場合はdevelopment タブに表示されます)
 
 URL: https://blsqui.net/registry/(your domain)
+<br><br>
 
 ## Step12 ゲームを実行
 
