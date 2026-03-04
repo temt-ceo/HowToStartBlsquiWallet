@@ -22,8 +22,6 @@ sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/
 ```
 blsqui-cli init —domain (Game’s landing page url) —email (same domain’s email address)
 ```
-
-email domain must same as domain.<br>
 e.g.<br>
 blsqui-cli init —domain https://aethel-dragon.com —email dev@aethel-dragon.com<br><br>
 email domain must same as domain.
