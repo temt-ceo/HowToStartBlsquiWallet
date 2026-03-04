@@ -1,14 +1,15 @@
 # Develoer Guide
 
-## 🛠 Blsqui CLIの操作方法
+## 🛠 Blsqui CLI: The Sovereign Asset Manager
 
-Blsqui CLIはデベロッパーがBlsqui Protocol インフラストラクチャーを操作する為のコマンドラインインターフェースです。
-
-トランザクションコードは普段ゲームをする人にはこれによって何が起こるのか分からない怖いコードです。
-そこで、Blsqui プロトコルにトランザクションコードとゲームガイドを一緒にしてIDを発行し、監査を経ることで、ゲームをする人にこれは「戦士の能力を仲間に貸し出し、魔法剣で攻撃」など信用できるメッセージをウォレットに表示できます。
+The Blsqui CLI provides developers with a secure interface to the Blsqui Protocol Infrastructure. In standard Web3 environments, “Blind Signing” creates a critical security vulnerability where users must authorize hex-code transactions.
+<br><br>
+Blsqui allows you to wrap complex Cadence interactions inside Sovereign Metadata. By registering your transaction logic with your official domain and a “Game Guide”, you can deliver human-readable transaction summaries. This ensures that a complex smart contract call is rendered in the wallet as a “Verified Institutional Action”, your players see a “Power-Up” or “Loot Drop” message and your custom artwork right in their wallet. This preserves the immersion of your game world and protects your Intellectual Property from external spoofing.
 <br><br>
 
-## Step1 :wrench: Install the Blsqui CLI
+## Step1 Provision the Blsqui Environment
+
+Install the Blsqui Engine.
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
@@ -16,27 +17,32 @@ sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/
 
 <br><br>
 
-## Step2 :sparkles: Register game domain.
+## Step2 Claim Your Domain Identity
 
 ```
 blsqui-cli init —domain (Game’s landing page url) —email (same domain’s email address)
 ```
 
-e.g.
-blsqui-cli init —domain https://aethel-dragon.com —email dev@aethel-dragon.com
-
+email domain must same as domain.<br>
+e.g.<br>
+blsqui-cli init —domain https://aethel-dragon.com —email dev@aethel-dragon.com<br><br>
 email domain must same as domain.
 <br><br><br>
 
-## Step3 Click one time use link, then project key is shown on the page. Download the file and change the password on the management screen.
+## Step3 Unlock Your Secret Project Key
 
+Verify Enterprise Ownership<br>
+Click one time use link, then project key is shown on the page. Download the file and change the password on the management screen.
+<br><br>
 Hello Team! A developer from your organization is claiming aethel-dragon.com on the Blsqui Protocol Registry. Please click here to verify ownership: https://blsqui.net/api/v1/verify?token=123abc
 
 Click the button.
 “Download blsqui-key.txt.”
 <br><br><br>
 
-## Step4 :gear: Configure Blsqui CLI with project key.
+## Step4 Sync Your Workspace
+
+Initialize Permanent Authentication.
 
 ```
 blsqui-cli config —file ./blsqui-key.txt
@@ -44,9 +50,9 @@ blsqui-cli config —file ./blsqui-key.txt
 
 <br><br>
 
-## Step5 :memo: トランザクションコードを考えます。
+## Step5 Develop the Cadence Transaction Layer
 
-./cadence/transactions/buy_item.cdcに以下のようなトランザクションコードがあったとします。
+Draft Your Game Move.
 
 ```
 import FungibleToken from 0xFungibleToken
@@ -78,9 +84,9 @@ transaction(itemID: UInt64, price: UFix64) {
 
 <br><br>
 
-## Step6 :memo: Prepare the Metadata(メタデータ(そのトランザクションに一致するゲームガイド)を考えJSONで作成する)
+## Step6 Design the Player Guide (Metadata)
 
-metadata.jsonを作成してゲームガイドを記入します。
+Define the Human-Readable Guide.
 
 ```
 {
@@ -104,7 +110,9 @@ metadata.jsonを作成してゲームガイドを記入します。
 
 <br><br>
 
-## Step7 :wrench: Install the Flow CLI
+## Step7 Equip the Flow SDK
+
+Integrate the Flow Protocol Toolkit.
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
@@ -112,7 +120,7 @@ sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/in
 
 <br><br>
 
-## Step8 :gear: Generate the FLIX Template.
+## Step8 Generate a FLIX Template
 
 ```
 flow flix generate ./cadence/transactions/buy_item.cdc \
@@ -123,7 +131,9 @@ flow flix generate ./cadence/transactions/buy_item.cdc \
 
 <br><br>
 
-## Step9 🚀 Upload your buy_item.template.json. You can attach one image.
+## Step9 Bind Visual IP to Transaction IDs.
+
+Register Visual Assets to Protocol.
 
 ```
 blsqui-cli upload ./template.json ./fire-sword.png
@@ -131,39 +141,36 @@ blsqui-cli upload ./template.json ./fire-sword.png
 
 <br><br>
 
-## Step10 :gear: 審査依頼を出します。
+## Step10 Execute the Security Review
+
+Request the Audit.
 
 ```
 blsqui-cli update —template-id x355dfx —require-audit
 ```
 
-<b>アップロードしたテンプレートの一覧を取得できます。(—allオプションをつけると審査状況と公開設定も表示されます)</b>
+<b>アップロードしたテンプレートの一覧を取得できます。(—allオプションをつけると審査状況と公開設定も表示されます。つけていない場合はtemplateIdとイメージ名を返します</b>
 
 ```
-blsqui-cli list # (templateIdとイメージ名を返す)
-```
-
-```
+blsqui-cli list
 blsqui-cli view —templateId “123xyz”
 blsqui-cli view —templateId “123xyz” —image
 ```
 
 <br><br>
 
-## Step11 📈 一般公開設定をします。
+## Step11 Promote to Global Registry
 
 ```
 blsqui-cli update —template-id x355dfx —publish
 ```
 
-ブラウジングページに表示されます。これによって世界に公開された信用のおけるトランザクションコードである事が証明されます。(審査が通っていない場合はdevelopment タブに表示されます)
+This will launch your template to global registry. (審査が通っていない場合はdevelopment タブに表示されます)
 
 URL: https://blsqui.net/registry/(your domain)
 <br><br>
 
-## Step12 ゲームを実行
-
-<b>テンプレートキーをmutateファンクションにセットするとウォレットが呼び出されます。一般公開設定をしていなくても表示されます。画像を登録していれば画像も表示されます。</b>
+## Step12 Trigger Your First Transaction
 
 ```
 important { mutate} from
@@ -176,6 +183,7 @@ await fcl.mutate({
 })
 ```
 
+一般公開設定をしていなくても表示されます。
 <br><br>
 
 #### サンプルトランザクションコード<br><br>
