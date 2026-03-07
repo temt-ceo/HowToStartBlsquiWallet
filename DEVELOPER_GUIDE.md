@@ -7,9 +7,7 @@ The Blsqui CLI provides developers with a secure interface to the Blsqui Protoco
 Blsqui allows you to wrap complex Cadence interactions inside Sovereign Metadata. By registering your transaction logic with your official domain and a “Game Guide”, you can deliver human-readable transaction summaries. This ensures that a complex smart contract call is rendered in the wallet as a “Verified Institutional Action”, your players see a “Power-Up” or “Loot Drop” message and your custom artwork right in their wallet. This preserves the immersion of your game world and protects your Intellectual Property from external spoofing.
 <br><br>
 
-## Step1 Provision the Blsqui Environment
-
-Install the Blsqui Engine.
+## Step1 Install the Blsqui Engine
 
 ```
 sh -ci "$(curl -fsSL https://raw.githubusercontent.com/blsqui/blsqui-cli/master/install.sh)"
