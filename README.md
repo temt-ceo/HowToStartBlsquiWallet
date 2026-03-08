@@ -33,7 +33,7 @@ Cadence 1.0 Security Migration
 
 Technical Lead: inquiry@tem-technologies.com
 
-#### Developed by TEM Technologies Co. & Blsqui Co., Ltd.
+#### Developed by TEM Technologies Co. LLC & Blsqui Co., Ltd.
 
 <br><br><br>
 
